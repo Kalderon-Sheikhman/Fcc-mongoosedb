@@ -8,6 +8,16 @@ mongoose.connect(process.env.MONGO_URI);
 
 
 
+mongoose.connect('mongodb+srv://admin:duaSHKH!229@mongoose.npeavfp.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser:true,useUnifiedTopology: true }, function(err, db) {
+  if(err) {
+      console.log(err);
+  }
+  else {
+      console.log('connected to ' + 'mongodb+srv://admin:duaSHKH!229@mongoose.npeavfp.mongodb.net/?retryWrites=true&w=majority');
+      
+  }
+});
+
 
 let Person;
 
@@ -59,7 +69,7 @@ const queryChain = (done) => {
   done(null /*, data*/);
 };
 
-mongoose.connect("mongodb+srv://admin:duaSHKH!229@mongoose.npeavfp.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 /** **Well Done !!**
 /* You completed these challenges, let's go celebrate !
